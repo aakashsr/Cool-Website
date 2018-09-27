@@ -1,5 +1,5 @@
 /* Basic Reset */
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -7,7 +7,7 @@
 
 /* Declare inheritable properties in <body> tag */
 
-body{
+body {
     font-family: 'Lato', sans-serif;
     font-size: 16px;
     font-weight: 400;
@@ -15,32 +15,33 @@ body{
     color: #fff;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
-.header{
-    background-color: #fff;
+.main-header,
+.nav-bar {
     display: flex;
     flex-direction: column;
+}
+
+.main-header {
     text-align: center;
+    padding: 6px
 }
 
-.logo-box{
-    padding: 15px;
+.logo {
+    width: 140px;
 }
 
-.logo{
-    height: 95px;
-}
 
-.navigation{
+.navigation {
     padding: 20px;
     width: 90%;
-    margin: 0 auto;
+    align-self: center;
 }
 
-.nav-bar a{
+.nav-bar a {
     display: block;
     padding: 6px;
     color: #797e83;
@@ -48,23 +49,23 @@ a{
     border-bottom: 1px solid #ebecec;
 }
 
-.nav-bar a:hover{
+.nav-bar a:hover {
     color: #0b0b0b;
     border-bottom-color: #52bab3;
 }
 
-.hero{
+.hero {
     background-color: #777;
 }
 
-.hero .rectangle-empty{
+.hero .rectangle-empty {
     padding: 10px;
     height: 80px;
     display: flex;
     justify-content: space-around;
 }
 
-.rectangle-content{
+.rectangle-content {
     height: 80px;
     width: 100%;
 }
@@ -72,32 +73,90 @@ a{
 .square-top-left,
 .square-top-right,
 .square-bottom-left,
-.square-bottom-right{
+.square-bottom-right {
     width: 60px;
 }
 
-.square-top-left{
+.square-top-left {
     border-top: 1px solid #000;
     border-left: 1px solid #000;
 }
 
-.square-top-right{
+.square-top-right {
     border-top: 1px solid #000;
     border-right: 1px solid #000;
 }
 
-.square-bottom-left{
+.square-bottom-left {
     border-bottom: 1px solid #000;
     border-left: 1px solid #000;
 }
 
-.square-bottom-right{
+.square-bottom-right {
     border-bottom: 1px solid #000;
     border-right: 1px solid #000;
 }
 
 
+/* --------------------------
+    Media Queries
+----------------------------*/
+
+@media (min-width:769px) {
+    .main-header {
+        height: 200px;
+        justify-content: flex-end;
+    }
+
+    .logo {
+        width: 120px;
+    }
+
+    .navigation{
+        width: 75%;
+    }
+
+    .nav-bar {
+        margin-top: .5em;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .nav-bar a {
+        border-bottom-color: transparent;
+    }
+}
 
 
 
+@media (min-width:1025px) {
 
+    .main-header {
+        height: 120px;
+        width: 80%;
+        margin: 0 auto;
+        flex-direction: row;
+    }
+
+    .logo-box {
+        margin-right: auto;
+        padding-top: .95em;
+    }
+
+    .logo {
+        width: 90px;
+    }
+
+    .navigation{
+        align-self: center;
+    }
+
+    .navigation,
+    .nav-bar{
+        margin-top: 0;
+    }
+
+    .main-header .navigation {
+        width: 40%;
+    }
+}
