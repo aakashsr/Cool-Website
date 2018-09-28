@@ -19,6 +19,10 @@ a {
     text-decoration: none;
 }
 
+/* --------------------------
+   Header
+----------------------------*/    
+
 .main-header,
 .nav-bar {
     display: flex;
@@ -27,7 +31,7 @@ a {
 
 .main-header {
     text-align: center;
-    padding: 6px
+    padding: 6px;
 }
 
 .logo {
@@ -35,16 +39,15 @@ a {
 }
 
 
-.navigation {
+.nav-bar {
     padding: 20px;
-    width: 90%;
-    align-self: center;
+    /* align-self: center; */
 }
 
 .nav-bar a {
     display: block;
     padding: 6px;
-    color: #797e83;
+    color: #777c81;
     font-weight: 300;
     border-bottom: 1px solid #ebecec;
 }
@@ -54,10 +57,6 @@ a {
     border-bottom-color: #52bab3;
 }
 
-.hero {
-    background-color: #777;
-}
-
 .hero .rectangle-empty {
     padding: 10px;
     height: 80px;
@@ -65,10 +64,10 @@ a {
     justify-content: space-around;
 }
 
-.rectangle-content {
-    height: 80px;
-    width: 100%;
+.hero .rectangle-content {
+    height: 180px;
 }
+
 
 .square-top-left,
 .square-top-right,
@@ -78,23 +77,23 @@ a {
 }
 
 .square-top-left {
-    border-top: 1px solid #000;
-    border-left: 1px solid #000;
+    border-top: 1px solid #777c81;
+    border-left: 1px solid #777c81;
 }
 
 .square-top-right {
-    border-top: 1px solid #000;
-    border-right: 1px solid #000;
+    border-top: 1px solid #777c81;
+    border-right: 1px solid #777c81;
 }
 
 .square-bottom-left {
-    border-bottom: 1px solid #000;
-    border-left: 1px solid #000;
+    border-bottom: 1px solid #777c81;
+    border-left: 1px solid #777c81;
 }
 
 .square-bottom-right {
-    border-bottom: 1px solid #000;
-    border-right: 1px solid #000;
+    border-bottom: 1px solid #777c81;
+    border-right: 1px solid #777c81;
 }
 
 
@@ -112,11 +111,9 @@ a {
         width: 120px;
     }
 
-    .navigation{
-        width: 75%;
-    }
-
     .nav-bar {
+        width: 75%;
+        margin: 0 auto;
         margin-top: .5em;
         flex-direction: row;
         justify-content: space-between;
@@ -128,12 +125,15 @@ a {
 }
 
 
-
 @media (min-width:1025px) {
 
+/* --------------------------
+   Header
+----------------------------*/    
+
     .main-header {
-        height: 120px;
-        width: 80%;
+        height: 100px;
+        width: 75%;
         margin: 0 auto;
         flex-direction: row;
     }
@@ -146,17 +146,13 @@ a {
     .logo {
         width: 90px;
     }
-
-    .navigation{
-        align-self: center;
+    
+    nav {
+        width: 70%;
     }
 
     .navigation,
-    .nav-bar{
+    .nav-bar {
         margin-top: 0;
-    }
-
-    .main-header .navigation {
-        width: 40%;
     }
 }
