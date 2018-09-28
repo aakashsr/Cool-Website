@@ -6,19 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Cool Website</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Six+Caps" rel="stylesheet">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <!-- <script src="main.js"></script> -->
 </head>
 
 <body>
     <header class='main-header'>
-        <div class='logo-box'>
-            <a href='/' class='site-logo'>
-                <img src='img/logo-green-2x.png' class='logo' alt='Logo'>
-            </a>
-        </div>
         <nav>
+            <div class='logo-box'>
+                <a href='/' class='site-logo'>
+                    <img src='img/logo-green-2x.png' class='logo' alt='Logo'>
+                </a>
+            </div>
             <ul class='nav-bar'>
                 <li><a href='#'>Home</a></li>
                 <li><a href='#'>Film</a></li>
@@ -26,6 +27,7 @@
                 <li><a href='#'>Hire Me</a></li>
             </ul>
         </nav>
+
 
         <div class='hero-text-box'>
             <div class='rectangle-empty'>
@@ -36,11 +38,25 @@
             </div>
 
             <div class='rectangle-content'>
-                <!-- <h3 class='role'>Director/Creator</h3>
-                <p>Based in Delhi , India</p>
-                <h1>Aman Upadhyay</h1>
-                <p>I make the content</p>
-                <p>yo were dreaming of</p> -->
+                <div class='contents'>
+                    <p class='about role'>Director/Creator</p>
+                    <p class='about place'>Based in Delhi , India</p>
+                    <h1 class='about name'>Aman Upadhyay</h1>
+                    <p class='about tag-line'>I make the content you were dreaming of</p>
+
+                </div>
+                <div class='social-media'>
+                    <a href="">
+                        <ion-icon name="logo-instagram"></ion-icon>
+                    </a>
+                    <a href="#">
+                        <ion-icon name="logo-youtube"></ion-icon>
+                    </a>
+                    <a href="#">
+                        <ion-icon name="logo-facebook"></ion-icon>
+                    </a>
+
+                </div>
             </div>
 
             <div class='rectangle-empty'>
@@ -50,7 +66,7 @@
                 </div>
             </div>
         </div>
-        </>
+        <script src="https://unpkg.com/ionicons@4.4.4/dist/ionicons.js"></script>
 </body>
 
 </html>
