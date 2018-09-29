@@ -14,6 +14,7 @@ iconLink.addEventListener('click', () => {
         navBar.style.width = '50%';
         navBar.style.marginTop = 0;
         navBar.style.paddingRight = '1.75em';
+        
     }
 
     if (icon.classList.contains('ion-md-menu')) {

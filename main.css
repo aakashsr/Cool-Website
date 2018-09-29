@@ -28,10 +28,12 @@ li {
 
 nav {
     height: 28%;
+    /* 28%(nav) + 1%(upper body padding) + 1%(lower body padding) + 70%(hero-text-box) */
 }
 
 .nav-bar {
     display: none;
+    /* Hiding the nav-bar for mobile */
 }
 
 .main-header {
@@ -46,7 +48,7 @@ nav {
 
 .logo {
     width: 70px;
-    padding: .3em;
+    padding: .5em;
 }
 
 .logo-box {
@@ -56,12 +58,13 @@ nav {
 .nav-bar a {
     display: block;
     width: 70%;
+    /* parent width is 50% set by JavaScript ,so 70% of 50% */
     margin: 0 auto;
     padding: 5px;
     color: #fff;
     font-weight: 300;
     border-bottom: 1px solid #ebecec;
-    transition: all .3s;
+    transition: border .3s;
 }
 
 .nav-bar a:hover {
@@ -87,10 +90,9 @@ nav {
 /* ----------- Hero Text ------------- */
 
 .hero-text-box {
-    height: 69%;
+    height: 70%;
     display: flex;
     flex-direction: column;
-    color: #fff;
     line-height: 1.4;
 }
 
@@ -103,17 +105,41 @@ nav {
 }
 
 .rectangle-content {
-    height: 200px;
+    height: 43%;
     margin-bottom: auto;
     margin-top: auto;
 }
+
+.square {
+    width: 60px;
+}
+
+.square-top-left {
+    border-top: 1px solid #fff;
+    border-left: 1px solid #fff;
+}
+
+.square-top-right {
+    border-top: 1px solid #fff;
+    border-right: 1px solid #fff;
+}
+
+.square-bottom-left {
+    border-bottom: 1px solid #fff;
+    border-left: 1px solid #fff;
+}
+
+.square-bottom-right {
+    border-bottom: 1px solid #fff;
+    border-right: 1px solid #fff;
+}
+
 
 .role,
 .name,
 .tag-line {
     text-transform: uppercase;
 }
-
 
 .role {
     font-size: 1.2em;
@@ -136,30 +162,6 @@ nav {
     font-size: .61em;
     margin-bottom: 2.5em;
     font-style: italic;
-}
-
-.square{
-    width: 60px;
-}
-
-.square-top-left {
-    border-top: 1px solid #fff;
-    border-left: 1px solid #fff;
-}
-
-.square-top-right {
-    border-top: 1px solid #fff;
-    border-right: 1px solid #fff;
-}
-
-.square-bottom-left {
-    border-bottom: 1px solid #fff;
-    border-left: 1px solid #fff;
-}
-
-.square-bottom-right {
-    border-bottom: 1px solid #fff;
-    border-right: 1px solid #fff;
 }
 
 .social-media {
@@ -189,34 +191,27 @@ nav {
 }
 
 
-@media only screen and (min-width:540px){
-
-    .role {
-        font-size: 1.65em;
-        font-weight: 700;
-        letter-spacing: 2px;
-    }
-    
-    .place {
-        font-size: .75em;
-    }
-    
-    .name {
-        letter-spacing: 5px;
-        font-size: 4.75em;
-    }
-    
-    .tag-line {
-        font-size: .6em;
-        letter-spacing: 2px;
-    }
-}
-
-
 
 /* --------------------------
     Media Queries
 ----------------------------*/
+
+
+@media only screen and (min-width:540px) {
+
+    .role {
+        font-size: 1.65em;
+    }
+
+    .name {
+        letter-spacing: 5px;
+        font-size: 4.75em;
+    }
+
+    .tag-line {
+        letter-spacing: 2px;
+    }
+}
 
 @media only screen and (min-width:768px) {
 
@@ -226,30 +221,23 @@ nav {
     }
 
 
-    .mobile-nav-icon {              /* Making the hamburger icon disappear */
-        display: none;
+    .mobile-nav-icon {
+        display: none;                /* Making the hamburger icon disappear */
     }
 
     nav {
-        height: 18%;
+        height: 18%;                  /* 18% + 1% + 1% + 80% */
     }
 
     .nav-bar {
         width: 70% !important;
-        padding-top: .5em;
+        margin: .5em auto;
         display: flex !important;
-       justify-content: center;
-    }
-
-
-    .nav-bar {
-        width: 85%;
-        margin: 0 auto;
-        margin-top: .5em;
+        justify-content: center;
     }
 
     .nav-bar li {
-        width: 22.5%;
+        width: 22.5%;                 /* 22.5 * 4 + 2.5 * 4 = 100% */  
         margin-right: 2.5%;
 
     }
@@ -262,11 +250,17 @@ nav {
         height: 80%;
     }
 
-    .hero-text-box .rectangle-empty {
+    .rectangle-empty {
         height: 120px;
     }
 
-    .square{
+    .rectangle-content{
+        height: 65%;
+        padding-top: 5%;
+        margin: 0;
+    }
+
+    .square {
         width: 100px;
     }
 
@@ -313,9 +307,13 @@ nav {
 
 @media (min-width:1024px) {
 
-    /* --------------------------
-   Header
-----------------------------*/
+    nav {
+        flex-direction: row;
+        height: 10%;                  /* 10 + 1 + 1 + 88 = 100 % */
+        width: 80%;
+        margin: 0 auto;
+        padding-left: 6%;
+    }
 
     .logo-box {
         margin-right: auto;
@@ -325,40 +323,20 @@ nav {
     .nav-bar {
         max-width: 65%;
         padding-left: 2em;
-        display: block;
-        padding-top: 1.5em;
-        margin-top: 0;
-    }
-
-    nav {
-        flex-direction: row;
-        height: 10%;
-        width: 80%;
-        margin: 0 auto;
-        padding-left: 6%;
+        padding-top: 1em;
     }
 
     .hero-text-box {
         height: 88%;
     }
 
-    .name {
-        font-size: 7em;
-        letter-spacing: 9px;
-        font-weight: 500;
-    }
-
     .role {
         font-size: 2.55em;
     }
 
-    .hero-text-box .rectangle-content {
-        text-transform: uppercase;
-        height: 45%;
-    }
-
-    .square{
-        margin: 1.5em ;
+    .name {
+        font-size: 7em;
+        letter-spacing: 9px;
     }
 
     .place {
@@ -367,5 +345,9 @@ nav {
 
     .tag-line {
         font-size: 1.1em;
+    }
+
+    .square {
+        margin: 1.5em;
     }
 }
