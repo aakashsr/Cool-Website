@@ -24,7 +24,6 @@ iconLink.addEventListener('click', () => {
         icon.classList.add('ion-md-menu');
         icon.classList.remove('ion-md-close');
     }
-
 });
 
 
