@@ -27,16 +27,12 @@ li {
 ----------------------------*/
 
 nav {
-    height: 40%;
+    height: 28%;
 }
 
-nav,
 .nav-bar {
-    display: flex;
-    flex-direction: column;
+    display: none;
 }
-
-
 
 .main-header {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/DSC_0089-Edit.jpg');
@@ -50,13 +46,18 @@ nav,
 
 .logo {
     width: 70px;
+    padding: .3em;
+}
+
+.logo-box {
+    float: left;
 }
 
 .nav-bar a {
     display: block;
     width: 70%;
     margin: 0 auto;
-    padding-top: 10px;
+    padding: 5px;
     color: #fff;
     font-weight: 300;
     border-bottom: 1px solid #ebecec;
@@ -64,14 +65,29 @@ nav,
 }
 
 .nav-bar a:hover {
+    border-bottom: 1px solid #ebecec;
     border-bottom-color: #52bab3;
+}
+
+
+/* ----------- Mobile Nav ------------- */
+
+.mobile-nav-icon {
+    float: right;
+    cursor: pointer;
+    color: #fff;
+    margin: .85em;
+}
+
+.icon {
+    font-size: 200%
 }
 
 
 /* ----------- Hero Text ------------- */
 
 .hero-text-box {
-    height: 58%;
+    height: 69%;
     display: flex;
     flex-direction: column;
     color: #fff;
@@ -122,11 +138,7 @@ nav,
     font-style: italic;
 }
 
-
-.square-top-left,
-.square-top-right,
-.square-bottom-left,
-.square-bottom-right {
+.square{
     width: 60px;
 }
 
@@ -177,24 +189,62 @@ nav,
 }
 
 
+@media only screen and (min-width:540px){
+
+    .role {
+        font-size: 1.65em;
+        font-weight: 700;
+        letter-spacing: 2px;
+    }
+    
+    .place {
+        font-size: .75em;
+    }
+    
+    .name {
+        letter-spacing: 5px;
+        font-size: 4.75em;
+    }
+    
+    .tag-line {
+        font-size: .6em;
+        letter-spacing: 2px;
+    }
+}
+
+
 
 /* --------------------------
     Media Queries
 ----------------------------*/
 
-@media (min-width:768px) {
+@media only screen and (min-width:768px) {
 
+    nav {
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .mobile-nav-icon {              /* Making the hamburger icon disappear */
+        display: none;
+    }
 
     nav {
         height: 20vh;
     }
 
     .nav-bar {
+        padding-top: .5em;
+        display: flex !important;
+       justify-content: center;
+    }
+
+
+    .nav-bar {
         width: 85%;
         margin: 0 auto;
         margin-top: .5em;
-        flex-direction: row;
-        justify-content: space-around;
     }
 
     .nav-bar li {
@@ -207,17 +257,14 @@ nav,
 
     .hero-text-box {
         height: 75vh;
-        margin-top: 1.5em
+        margin-top: 1.5em;
     }
 
     .hero-text-box .rectangle-empty {
         height: 120px;
     }
 
-    .square-top-left,
-    .square-top-right,
-    .square-bottom-left,
-    .square-bottom-right {
+    .square{
         width: 100px;
     }
 
@@ -274,7 +321,11 @@ nav,
     }
 
     .nav-bar {
+        width: 60%;
+        padding-left: 2em;
+        display: block;
         padding-top: 1.5em;
+        margin-top: 0;
     }
 
     nav {
@@ -283,11 +334,6 @@ nav,
         width: 80%;
         margin: 0 auto;
         padding-left: 6%;
-    }
-
-    .nav-bar {
-        margin-top: 0;
-        width: 50%;
     }
 
     .hero-text-box {
@@ -307,6 +353,10 @@ nav,
     .hero-text-box .rectangle-content {
         text-transform: uppercase;
         height: 45%;
+    }
+
+    .square{
+        margin: 1.5em ;
     }
 
     .place {
