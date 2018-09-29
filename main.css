@@ -39,7 +39,7 @@ nav {
     background-position: center;
     background-size: cover;
     text-align: center;
-    padding: 6px;
+    padding: 1%;
     height: 100%;
     color: #fff;
 }
@@ -231,10 +231,11 @@ nav {
     }
 
     nav {
-        height: 20vh;
+        height: 18%;
     }
 
     .nav-bar {
+        width: 70% !important;
         padding-top: .5em;
         display: flex !important;
        justify-content: center;
@@ -248,7 +249,9 @@ nav {
     }
 
     .nav-bar li {
-        width: 120px;
+        width: 22.5%;
+        margin-right: 2.5%;
+
     }
 
     .nav-bar a {
@@ -256,8 +259,7 @@ nav {
     }
 
     .hero-text-box {
-        height: 75vh;
-        margin-top: 1.5em;
+        height: 80%;
     }
 
     .hero-text-box .rectangle-empty {
@@ -321,7 +323,7 @@ nav {
     }
 
     .nav-bar {
-        width: 60%;
+        max-width: 65%;
         padding-left: 2em;
         display: block;
         padding-top: 1.5em;
@@ -330,14 +332,14 @@ nav {
 
     nav {
         flex-direction: row;
-        height: 15vh;
+        height: 10%;
         width: 80%;
         margin: 0 auto;
         padding-left: 6%;
     }
 
     .hero-text-box {
-        height: 80vh;
+        height: 88%;
     }
 
     .name {
