@@ -1,17 +1,25 @@
 /* Basic Reset */
-* {
-    margin: 0;
+*,
+*::after,
+*::before {
+    margin: 0;          /*The browsers by default display some margin around the body*/
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: inherit;
 }
 
 /* Declare inheritable properties in <body> tag */
+html {
+    font-size: 62.5%;
+}
+
 
 body {
     font-family: 'Lato', sans-serif;
-    font-size: 16px;
+    /* font-size: 16px; */
+    font-size: 1.6rem;
     font-weight: 400;
     line-height: 1.3;
+    box-sizing: border-box;
 }
 
 a {
@@ -41,14 +49,14 @@ nav {
     background-position: center;
     background-size: cover;
     text-align: center;
-    padding: 1%;
+    padding: 2rem;
     height: 100%;
     color: #fff;
 }
 
 .logo {
     /* width: 400px; */
-    padding: .5em;
+    padding: .5rem;
 }
 
 .logo-box {
@@ -60,7 +68,7 @@ nav {
     width: 70%;
     /* parent width is 50% set by JavaScript ,so 70% of 50% */
     margin: 0 auto;
-    padding: 5px;
+    padding: .5rem;
     color: #fff;
     font-weight: 300;
     border-bottom: 1px solid #ebecec;
@@ -79,7 +87,7 @@ nav {
     float: right;
     cursor: pointer;
     color: #fff;
-    margin: .85em;
+    margin: .85rem;
 }
 
 .icon {
@@ -98,8 +106,8 @@ nav {
 
 
 .rectangle-empty {
-    padding: 10px;
-    height: 80px;
+    padding: 1rem;
+    height: 8rem;
     display: flex;
     justify-content: space-between;
 }
@@ -111,7 +119,7 @@ nav {
 }
 
 .square {
-    width: 60px;
+    width: 6rem;
 }
 
 .square-top-left {
@@ -144,37 +152,37 @@ nav {
 .role {
     font-size: 1.2em;
     font-weight: 700;
-    letter-spacing: 2px;
+    letter-spacing: .2rem;
 }
 
 .place {
-    font-size: .75em;
+    font-size: 1.25rem;
 }
 
 .name {
     font-family: 'Six Caps', sans-serif;
-    letter-spacing: 4px;
-    font-size: 3.75em;
+    letter-spacing: .4rem;
+    font-size: 6rem;
     font-weight: 400;
 }
 
 .tag-line {
-    font-size: .61em;
-    margin-bottom: 2.5em;
+    font-size: .98rem;
+    margin-bottom: 4rem;
     font-style: italic;
 }
 
 .social-media {
     text-align: center;
-    margin-top: .5em;
+    margin-top: .8rem;
 }
 
 .social-media a {
-    padding: .65em;
+    padding: 1rem;
 }
 
 .social-media ion-icon {
-    font-size: 25px;
+    font-size: 2.5rem;
     color: #fff
 }
 
@@ -200,16 +208,16 @@ nav {
 @media only screen and (min-width:540px) {
 
     .role {
-        font-size: 1.65em;
+        font-size: 2.64rem;
     }
 
     .name {
-        letter-spacing: 5px;
-        font-size: 4.75em;
+        letter-spacing: .5rem;
+        font-size: 7.5rem;
     }
 
     .tag-line {
-        letter-spacing: 2px;
+        letter-spacing: .15rem;
     }
 }
 
@@ -254,7 +262,7 @@ nav {
     }
 
     .rectangle-empty {
-        height: 120px;
+        height: 12rem;
     }
 
     .rectangle-content {
@@ -264,7 +272,7 @@ nav {
     }
 
     .square {
-        width: 100px;
+        width: 10rem;
     }
 
     .square-top-left {
@@ -296,29 +304,28 @@ nav {
     }
 
     .role {
-        font-size: 2.15em;
+        font-size: 3.45rem;
     }
 
     .place {
-        font-size: .95em;
+        font-size: 1.5rem;
         text-transform: lowercase;
     }
 
     .name {
-        font-size: 6em;
-        letter-spacing: 7px;
+        font-size: 9.6rem;
+        letter-spacing: .7rem;
         font-weight: 500;
     }
 
     .tag-line {
-        font-size: .9em;
-        letter-spacing: 1px;
+        font-size: 1.35rem;
     }
 
     @keyframes move-in-left {
         0% {
             opcity: 0;
-            transform: translate(-20px);
+            transform: translate(-2rem);
         }
 
         100% {
@@ -330,7 +337,7 @@ nav {
     @keyframes move-in-right {
         0% {
             opcity: 0;
-            transform: translate(20px);
+            transform: translate(2rem);
         }
 
         100% {
@@ -353,13 +360,13 @@ nav {
 
     .logo-box {
         margin-right: auto;
-        padding-top: .95em;
+        padding-top: 1.52rem;
     }
 
     .nav-bar {
         max-width: 65%;
-        padding-left: 2em;
-        padding-top: 1em;
+        padding-left: 3.2rem;
+        padding-top: 1.6rem;
     }
 
     .hero-text-box {
@@ -367,23 +374,23 @@ nav {
     }
 
     .role {
-        font-size: 2.55em;
+        font-size: 4.1rem;
     }
 
     .name {
-        font-size: 7em;
-        letter-spacing: 9px;
+        font-size: 11.2rem;
+        letter-spacing: .9rem;
     }
 
     .place {
-        font-size: 1.1em;
+        font-size: 1.75rem;
     }
 
     .tag-line {
-        font-size: 1.1em;
+        font-size: 1.65rem;
     }
 
     .square {
-        margin: 1.5em;
+        margin: 2.4rem;
     }
 }
